@@ -23,8 +23,6 @@ public class SplashActivity extends AppCompatActivity {
     private void initView() {
         setContentView(R.layout.activity_splash);
 
-        //dddddddddddddddddddd
-
         ivSplash = (ImageView) findViewById(R.id.ivSplash);
         //自定义透明动画
         AlphaAnimation alphaAnimation = new AlphaAnimation(0f, 1f);
