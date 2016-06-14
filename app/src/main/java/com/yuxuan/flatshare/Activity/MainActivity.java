@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.yuxuan.flatshare.R;
+import com.yuxuan.flatshare.Utils.ConfigUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,5 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         setContentView(R.layout.activity_main);
+        //设置为第一次运行
+        ConfigUtils.setIsRun(this);
     }
 }
