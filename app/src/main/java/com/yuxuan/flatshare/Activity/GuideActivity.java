@@ -74,17 +74,19 @@ public class GuideActivity extends AppCompatActivity {
         rgGuide.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (R.id.rbGuide1 == checkedId) {
-                    vpGuide.setCurrentItem(0);
-                }
-                if (R.id.rbGuide2 == checkedId) {
-                    vpGuide.setCurrentItem(1);
-                }
-                if (R.id.rbGuide3 == checkedId) {
-                    vpGuide.setCurrentItem(2);
-                }
-                if (R.id.rbGuide4 == checkedId) {
-                    vpGuide.setCurrentItem(3);
+                switch (checkedId) {
+                    case R.id.rbGuide1:
+                        vpGuide.setCurrentItem(0);
+                        break;
+                    case R.id.rbGuide2:
+                        vpGuide.setCurrentItem(1);
+                        break;
+                    case R.id.rbGuide3:
+                        vpGuide.setCurrentItem(2);
+                        break;
+                    case R.id.rbGuide4:
+                        vpGuide.setCurrentItem(3);
+                        break;
                 }
             }
         });

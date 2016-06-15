@@ -1,13 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Activity.MainActivity">
 
-    <TextView
-        android:text="main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/frmMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8">
 
-</RelativeLayout>
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rgMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_top_line"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMenu1"
+            style="@style/rbMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_menu_home"
+            android:gravity="center"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rbMenu2"
+            style="@style/rbMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_menu_search"
+            android:gravity="center"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/rbMenu3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_menu_add"
+            android:button="@null"
+            android:drawableTop="@mipmap/menu_add"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="#ffffff" />
+
+        <RadioButton
+            android:id="@+id/rbMenu4"
+            style="@style/rbMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_menu_message"
+            android:gravity="center"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/rbMenu5"
+            style="@style/rbMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_menu_oneself"
+            android:gravity="center"
+            android:text="自己" />
+
+    </RadioGroup>
+
+</LinearLayout>
